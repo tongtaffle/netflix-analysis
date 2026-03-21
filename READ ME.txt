@@ -1,0 +1,37 @@
+Project Overview
+
+	This project focuses on cleaning and preparing a Netflix dataset for further analysis. The dataset consists of two main files:
+
+	titles.csv: Contains information about movies and TV shows
+	credits.csv: Contains information about actors and directors
+
+	The goal of this step is to ensure the data is clean, consistent, and ready for analysis.
+
+Data Cleaning Process
+	1. Data Inspection
+		Checked dataset structure using .info() and .head()
+		Identified missing values and data types
+		Reviewed column consistency
+	2. Handling Missing Values
+		Titles Dataset
+			Dropped Rows
+				Removed rows with missing title (only 1 row, critical field)
+				Filled Missing Values
+					description : filled with "No description"
+					age_certification : filled with "Unknown"
+					seasons : filled with 0 (represents movies)
+			Numerical Columns
+					imdb_score : filled with median
+					imdb_votes : filled with 0
+					tmdb_popularity : filled with median
+					tmdb_score : filled with median
+
+		 Credits Dataset
+			character_name contains many missing values
+				This is considered natural missing data (e.g., directors do not have character names)
+				Filled missing values with "Unknown"
+
+
+	3. Data Type Validation
+		Ensured correct data types for numerical and categorical columns
+		Prepared dataset for analysis and visualization
