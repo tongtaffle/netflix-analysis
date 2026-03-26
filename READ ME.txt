@@ -13,7 +13,7 @@ Data Cleaning Process
 		Identified missing values and data types
 		Reviewed column consistency
 	2. Handling Missing Values
-		Titles Dataset
+		Titles Dataset:
 			Dropped Rows
 				Removed rows with missing title (only 1 row, critical field)
 				Filled Missing Values
@@ -26,7 +26,7 @@ Data Cleaning Process
 					tmdb_popularity : filled with median
 					tmdb_score : filled with median
 
-		 Credits Dataset
+		 Credits Dataset:
 			character_name contains many missing values
 				This is considered natural missing data (e.g., directors do not have character names)
 				Filled missing values with "Unknown"
@@ -35,3 +35,48 @@ Data Cleaning Process
 	3. Data Type Validation
 		Ensured correct data types for numerical and categorical columns
 		Prepared dataset for analysis and visualization
+	4.Converted genres and production_countries to list format and exploded genres
+	5.Removed duplicates in both datasets
+	6.Cleaned credits data (handled missing character_name, filtered valid names, separated roles)
+	7.Merged datasets using id (left join)
+	8.Removed outliers (invalid ratings, runtime)
+	9.Created new features (content_age, avg_score)
+
+Key insights
+	1. Overview
+		- The dataset contains a total of 5,385 titles.
+		- Movies account for approximately 64.15%, while TV Shows represent 35.85% of the total content. This indicates that the platform is more focused on movies.
+		- The highest number of content releases occurred in 2019, with approximately 835 titles. This suggests a peak in content production during that period.
+		- The number of content releases has increased over the years. From 2013 to 2019, content volume changed from 135 to 835 titles, indicating a growth trend.
+	2. Genres analysis
+		- The most common genre is drama, with a total of 1417 titles. This highlights a strong focus on this category within the platform.
+		- The genre with the highest average IMDb score is documentary, with an average rating of 7.01. This suggests that this genre tends to have higher-quality or more critically acclaimed content.
+		- The most popular genre based on popularity metrics is scifi, with a score of 63.01. This indicates strong audience interest in this category.
+		- Movies are more concentrated in genres such as comedy, while TV Shows are more dominant in drama. This suggests that content type influences genre distribution and audience targeting.
+	3. Rating & popularity
+		- The highest-rated content is raja rasoi aur anya kahaniyaan, with an IMDb score of 9.45, indicating strong critical reception.
+		- Overall, most content falls within the range of 6 to 8, suggesting that the majority of titles receive moderate ratings.
+		- The most popular content based on TMDB popularity is incantation, with a score of 2274.04, indicating high audience attention.
+		- There appears to be a weak positive relationship between popularity and average score.
+		- While some high-rated titles also have high popularity, there are cases where content with high ratings but low popularity, suggesting that audience interest does not always align with critical ratings.
+	4. People analysis
+		Actor analysis
+		- The actor with the highest number of appearances is Boman Irani and Kareena Kapoor Khan, appearing in approximately 25 titles, indicating a strong presence across the platform.
+		- Actors associated with the highest-rated content include Dr Pushpesh Pant and  Manwendra Tripathy, with an average score of around 9.45, suggesting consistent performance in high-quality productions.
+		- There is a weak relationship between actors and content popularity, as titles featuring top actors achieve an average popularity score of 2226.23, compared to the overall average of 23.87.
+		Director analysis
+		- The most active director is Raúl Campos, contributing to approximately 20 titles, highlighting high productivity.
+		- Directors producing the highest-rated content include tooniverse, with an average score of 9.15, indicating strong content quality.
+		- The influence of directors on content quality appears to be weak, as the variation in average scores across directors ranges from 2.50 to 9.15.
+	5. Content Characteristics
+		- Most content falls within a runtime range of 10 to 170 minutes, indicating a concentration of standard-length productions.
+		- There is a weak relationship between runtime and average score, as ratings remain relatively stable across different runtime ranges.
+		- Extremely short and very long content show greater variability in scores, suggesting that runtime alone is not a strong determinant of content quality.
+		- The average number of seasons per TV show is approximately 7, with most series having 15 to 21 seasons.
+		- There is a weak relationship between the number of seasons and average score, as ratings do not consistently increase with longer series.
+		- While some long-running series achieve high ratings, many maintain similar or declining scores over time, indicating that longer duration does not guarantee higher quality.
+		- The highest average score is observed in the TV-14 category, with a score of around 7.36.
+		- Content targeted at adult audiences tends to have lower average scores, suggesting differences in audience expectations and evaluation criteria.
+
+
+Overall, content characteristics such as runtime, number of seasons, and age certification show limited influence on average scores, suggesting that content quality is likely driven more by factors such as storytelling, cast, and production quality rather than structural attributes alone.
