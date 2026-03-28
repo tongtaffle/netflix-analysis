@@ -77,6 +77,10 @@ Key insights
 		- While some long-running series achieve high ratings, many maintain similar or declining scores over time, indicating that longer duration does not guarantee higher quality.
 		- The highest average score is observed in the TV-14 category, with a score of around 7.36.
 		- Content targeted at adult audiences tends to have lower average scores, suggesting differences in audience expectations and evaluation criteria.
-
+	6. Country analysis
+	- Content is concentrated in a few countries, with the top 10 countries contributing the majority of titles. The leading country (United States) alone has 2310 titles.
+	- High production volume does not always mean high quality. While United States has the most titles (2310), its average score (6.67) is lower than Republic Of Korea, which has fewer titles (226) but a higher score (7.41).
+	- Smaller countries can still produce high-quality content. For example, Hungary and Portugal achieve average scores of 6.96 and 6.92, despite having lower content volume.
+	- Some entries have missing production country data and were labeled as "Unknown" to maintain data completeness.
 
 Overall, content characteristics such as runtime, number of seasons, and age certification show limited influence on average scores, suggesting that content quality is likely driven more by factors such as storytelling, cast, and production quality rather than structural attributes alone.

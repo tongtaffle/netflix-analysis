@@ -35,6 +35,7 @@ title = title.dropna(subset='title')
 # fill text
 title["description"] = title["description"].fillna("No description")
 title["age_certification"] = title["age_certification"].fillna("Unknown")
+title['imdb_id'] = title['imdb_id'].fillna('Unknown')
 # logical fill
 title["seasons"] = title["seasons"].fillna(0)
 
@@ -59,9 +60,28 @@ title['tmdb_popularity'] = title['tmdb_popularity'].astype(float)
 title['genres'] = title['genres'].apply(lambda x: ast.literal_eval(x) if pd.notnull(x) else [])
 title['production_countries'] = title['production_countries'].apply(lambda x: ast.literal_eval(x) if pd.notnull(x) else [])
 title = title.explode('genres')
+title = title.explode('production_countries')
+title['production_countries'] = title['production_countries'].str.strip()
+
+# mapping country
+import pycountry
+
+def get_country_name(code):
+    try:
+        return pycountry.countries.get(alpha_2=code).name
+    except:
+        return None
+
+title['country_name'] = title['production_countries'].apply(get_country_name)
+
+# fill text (country)
+title['production_countries'] = title['production_countries'].fillna('Unknown')
+title['country_name'] = title['country_name'].fillna('Unknown')
+title['genres'] = title['genres'].fillna('Unknown')
+
 
 # remove duplicate 
-title = title.drop_duplicates(subset=['id'])
+title = title.drop_duplicates()
 credit = credit.drop_duplicates()
 
 # Clean Credits Data 
@@ -86,9 +106,14 @@ title['content_age'] = 2026 - title['release_year']
 title['avg_score'] = (title['imdb_score'] + title['tmdb_score']) / 2
 
 
+
 # Export #
-title.to_csv("title_cleaned.csv", index=False)
+title.to_csv("title_country.csv", index=False)
 credit.to_csv("credit_cleaned.csv", index=False)
 
+# check
+print("check")
+print(title.isnull().sum())
+print(credit.isnull().sum())
 
 

@@ -1304,8 +1304,8 @@ person_id,id,name,character,role
 479070,tm126769,JosÃ© Andrada,Empleado de la morgue,ACTOR
 1826975,tm126769,Miguel Ãngel Porro,Colectivero,ACTOR
 1003708,tm126769,Gofredo Colombo,Don Genaro,ACTOR
-1041848,tm126769,Juan Acosta,"Peralta	- Oficial de policÃ­a.",ACTOR
-479070,tm126769,JosÃ© Andrada,"PolicÃ­a	- CompaÃ±ero de Peralta.",ACTOR
+1041848,tm126769,Juan Acosta,Peralta	- Oficial de policÃ­a.,ACTOR
+479070,tm126769,JosÃ© Andrada,PolicÃ­a	- CompaÃ±ero de Peralta.,ACTOR
 402187,tm126769,Alejandro Doria,Unknown,DIRECTOR
 6638,tm152839,Tim Allen,Himself,ACTOR
 141630,tm152839,Ellen Brown,Unknown,DIRECTOR
@@ -15397,7 +15397,7 @@ person_id,id,name,character,role
 67792,tm69915,Madhur Bhandarkar,Unknown,DIRECTOR
 6506,tm164090,Lavell Crawford,Himself,ACTOR
 146832,tm164090,Michael Drumm,Unknown,DIRECTOR
-49840,tm37175,Jeff Dunham,"Himself / Achmed	/ Walter / Peanut / Jose Jalapeno on a Stick / Bubba J.",ACTOR
+49840,tm37175,Jeff Dunham,Himself / Achmed	/ Walter / Peanut / Jose Jalapeno on a Stick / Bubba J.,ACTOR
 65462,tm37175,Manny Rodriguez,Unknown,DIRECTOR
 139538,tm66725,Vimal,Seenu,ACTOR
 177432,tm66725,Shiva,Raghu,ACTOR
